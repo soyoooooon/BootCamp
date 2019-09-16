@@ -1,0 +1,45 @@
+#mainNav
+{width: 100vw;
+height: 12vh;
+background-color: #f7f7f7;
+
+
+ul {
+list-style-type: none;
+display: flex;
+flex-direction: row;
+float: right;
+margin: -50px 50px 0px 0px;
+
+ li a {
+   
+display: block;
+color: #313839;
+font-size: 1.3em;
+text-decoration: none;
+padding: 10px;
+text-transform: uppercase;
+letter-spacing: 0.9px;
+cursor: pointer;
+@media only screen and (min-width: 576px) and (max-width: 768px) {font-size: 1em;} 
+
+}
+
+}
+
+}
+
+#logo
+{
+width: 20vw;
+height: 8vh;
+padding-top: 2.5vh;
+padding-left: 5vw;
+
+}
+
+#logo img
+{
+width: 18vw;
+height: 7vh;
+}

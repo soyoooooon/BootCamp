@@ -1,0 +1,24 @@
+#mainFooter
+{
+    width: 100vw;
+    height: 12vh;
+    margin-top: 20vh;
+    background-color: #313839;
+
+
+ul{
+list-style-type: none;
+display: flex;
+flex-direction: row;
+margin-left: 40vw;
+
+
+.fab { color: #fcb724; font-size: 4vw;}
+
+    li{margin: 10px;
+        text-align: center;}
+
+}
+p{color:#fcb724; font-size: 14px; margin-left: 39vw;}
+
+}
