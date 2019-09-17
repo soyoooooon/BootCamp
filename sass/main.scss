@@ -1,8 +1,10 @@
 @import '_vars';
 @import 'modules/navbar';
-// @fontface might or might not work
 
-main{
+main {
+    width: 100%;
+    overflow: hidden;
+    background-color: $bg-color;
     font-family: 'DIN Alternate';
     src: url('DIN Alternate Bold.woff')format('woff'),
     url('DIN Alternate Bold.woff2')format('woff2'); 
@@ -14,24 +16,31 @@ main{
     }
 }
 
-h1 {display: $hide;}
+.hidden { display: $hide; }
+
+// Desktop Size
 
 //slide
-//
-
-#mainSlide figure 
-{   width: 100vw;
+#mainSlide {   
+    width: 100%;
     height: 100vh;
     background-image: url(../images/banner1.jpg);
-    background-position: center;
+    background-position: center center;
     background-size: cover;
-    animation: fade 10s infinite ease-in-out ;
-    opacity: 0.8;
-    
-
+    animation: fade 20s ease-in-out infinite;
 }
 
-
+#mainSlide::before {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    height: 90vh;
+    content: "";
+    display: block;
+    background: rgba(black, 0.4);
+    z-index: 1;   
+}
 
 @keyframes fade {
     0% {background-image: url(../images/banner1.jpg);}
@@ -41,194 +50,419 @@ h1 {display: $hide;}
 }
 
 //here's banner text 
-.banner-text
-{
-width: 50vw;
-height: 40vh;
-padding-top: 30vh;
-padding-left: 10vw;
+.banner-text {
+    width: 50vw;
+    position: relative;
+    top: 300px;
+    left: 70px;
+    z-index: 2;
+    // height: 40vh;
+    // padding-top: 30vh;
+    // padding-left: 10vw;
+    
+    h2 {
+        text-align: left; 
+        color: $bg-color; 
+        font-size: 4em; 
+        letter-spacing: 3.5px;
+        line-height: 1.25em;
 
-
-
- h2 {text-align: left; color: $bg-color; font-size: 4em; letter-spacing: 4.5px;
-    span{color: $main-color;}
-}
- .banner-bt {width: 390px; height: 50px;
- background-color:$main-color;
- border-radius: 10px; 
- color: $bg-color;
- font-size: 1.5em;
- margin-top: 50px;
- border: $hide;
- font-family: 'DIN Alternate';}
-
+        span {color: $main-color;}
+    }
+    
+    .banner-bt {
+        width: 385px; 
+        height: 50px;
+        background-color:$main-color;
+        border-radius: 15px; 
+        color: $black;
+        font-size: 1.5em;
+        margin-top: 30px;
+        border: $hide;
+        font-family: 'DIN Alternate';
+    }
 }
 
 //Team page 
-
-.section-cover {
-    width: 100vw;
+#team {
+    width: 100%;
     height: 100vh;
-    background-image: url(../images/team.jpg);
+    background-image: url(../images/banner_team.png);
+    background-position: center center;
     background-size: cover;
-}
-​
-// this is the text
-.clip-text {
-    position: relative; // this is the important thing
-    font-size: 60px;
-    font-family: 'DIN Alternate', sans-serif;
-    text-align: center;
-    line-height: 100vh;
-    color: $bg-color;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-​
-// this is so that the before and after stuff actually SHOWS
-.clip-text:before, .clip-text:after {
-    position: absolute;
-    content: '';
-}
-​
-// this is the real background
-.clip-text:before {
-    background-image: inherit;
-    background-size: cover;
-    z-index: -2;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-}
-​
-// this is the black zone
-.clip-text:after {
-    z-index: -1;
-    background-color: $black;
-    top: 44%;
-    left: 38%;
-    bottom: 44%;
-    right: 38%;
+    background-attachment: fixed;
 }
 
+//Our mission
+#mission {
+    background-color: #f7f7f7;
+    width: 100%;
+    height: 100%; 
+    padding: 50px 0;
+    
+    .mission-h2 {
+        text-align: center;
+        font-size: 2em;
+        padding-bottom: 50px;
+    }
 
-
-/* Our Mission */
-
-#mission
-{
-background-color: #f7f7f7;
-width: 100vw;
-height: 100vh; 
-
-
-.mission-h2 {
-text-align: center;
-font-size: 2em;
-padding-top: 70px;
-padding-bottom: 70px;
-}
-
-video{width: 70vw; height: 70vh; margin-left: 15vw;}
-
-
+    video { 
+        display: block;
+        width: 70%; 
+        margin: 0 auto;
+        height: auto; 
+    }
 }
 
 //team info
-#team-info{
-width: 100vw;
-height: 60vh;
-display:flex;
-flex-direction: row;
-
-
- img{
-    width: 25vw;
-}
-
-
-
-}
-
-
-#team-work{
-    width: 100vw;
+#team-info {
+    width: 100%;
     height: 100vh;
-    background-image: url(../images/work.jpg);
-    background-position: center;
+    display: flex;
+    flex-direction: row;
+
+    div {
+        width: 25%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-position-x: -120px;
+    }
+
+    #Dil { background-image: url(../images/team_daffodil.jpg);}
+    #Yoon { background-image: url(../images/team_soyoon.jpg);}
+    #Sujin { background-image: url(../images/team_sujin.jpg);}
+    #Jeff { background-image: url(../images/team_jeff.jpg);}
+}
+
+#team-work {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/banner_work.png);
+    background-position: center center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
-#exWork
-{
-width: 100vw;
-background-color: $bg-color;
+#exWork {
+    width: 100%;
+    background-color: $bg-color;
+    padding: 50px 0;
 
-h2{text-align: center; font-size: 1.5em; letter-spacing: 2px; padding-top: 10vh; color: $black;}
+    h2 {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center; 
+        font-size: 1.5em;  
+        color: $black;
+    }
 
-.cont{
-width:100vw;
-padding-top: 20px;
-padding-bottom: 50px;
-display:flex; 
-flex-direction: row; 
-flex-wrap: wrap;
+    .cont {
+        width:100%;
+        padding-top: 20px;
+        padding-bottom: 50px;
+        display:flex; 
+        flex-direction: row; 
+        flex-wrap: wrap;
 
-
-img{width: 45vw;
-margin-left: 2.5vw;
-margin-right: 2.5vh;
-margin-top: 5vh;}
-}
-
+        img {
+            width: 45vw;
+            margin-left: 2.5vw;
+            margin-right: 2.5vh;
+            margin-top: 5vh;
+            filter: drop-shadow(0 5px 5px black);
+        }
+    }
 }
 
 #contact-img {
-width: 100vw;
-height: 100vh;
-background-image: url(../images/contact.jpg);
-background-position: center;
-background-size: cover; 
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/banner_contact.png);
+    background-position: center center;
+    background-size: cover; 
+    background-attachment: fixed;
 }
 
-#contact-form{
+#contact-form {
 
-
-
-h2{color: $black; text-align: center; font-size: 1.5em;letter-spacing: 3px; padding-top: 50px;}
-
-
-
-    fieldset input{
-        margin-top: 5vh;
-        width: 80vw; height: 10vh; 
-        margin-left: 10vw; 
-        border: solid $main-color 5px;
+    h2 {
+        color: $black; 
+        text-align: center; 
         font-size: 1.5em;
-        font-family: 'DIN Alternate';
+        // letter-spacing: 3px; 
+        padding-top: 50px;
     }
-        textarea{
-        margin-top: 5vh;
-        width: 80vw; height: 40vh; 
-        margin-left: 10vw; 
-        margin-bottom:3vh;
-        border: solid $main-color 5px;
-        font-size: 1.5em;
+}
+
+#form {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+
+    input {
+        width: 100%; 
+        height: 30px; 
+        margin-top: 30px; 
+        padding: 5px;
+        border: solid $main-color 3px;
         font-family: 'DIN Alternate';
-          }
-        .button{
-        margin-left:43vw;
+        font-size: 1.25em;
+    }
+
+    textarea {
+        width: 100%; 
+        height: 160px; 
+        margin-top: 30px;
+        padding: 5px;
+        border: solid $main-color 3px;
+        font-family: 'DIN Alternate';
+        font-size: 1.25em;
+    }
+    
+    .submit-btn {
         width: 160px;
         height: 45px;
         background-color: $main-color;
         color:$black;
         font-size: 1.2em;
         font-family: 'DIN Alternate';
-        border: $hide;}
+        border: $hide;
+        margin-top: 30px;
     }
+}
         
-    @import 'modules/footer';
+@import 'modules/footer';
 
+// Tablet Size
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    #mainSlide { background-position: center right; }
     
+    .banner-text {
+        width: 100%;
+        position: relative;
+        top: 420px;
+        left: 0;
+        text-align: center;
+        
+        h2 { text-align: center; }
+    }
+
+    //Team page 
+    //Our mission
+    #mission {
+        height: 100%; 
+        padding: 50px 0;
+
+        .mission-h2 {
+            text-align: center;
+            font-size: 2em;
+            padding: 0 0 50px;
+        }
+
+        video { 
+            display: block;
+            width: 80%; 
+            margin: 0 auto;
+            height: auto;
+        }
+    }
+
+    //team info
+    #team-info {
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+
+        div {
+            background-position-x: -50px;
+        }
+    }
+
+    // Work examples
+    #exWork {
+        width: 100%;
+        background-color: $bg-color;
+    
+        h2 {
+            text-align: center; 
+            font-size: 1.25em; 
+            // letter-spacing: 2px; 
+            padding-top: 50px; 
+            color: $black;
+        }
+    
+        .cont {
+            width:100%;
+            padding: 0 0 50px;
+            display:flex; 
+            flex-direction: row; 
+            flex-wrap: wrap;
+    
+            img {
+                width: 80%;
+                margin: 50px auto 0;
+                filter: drop-shadow(0 5px 5px black);
+            }
+        }
+    }
+
+    #contact-form {
+
+        h2 {
+            color: $black; 
+            text-align: center; 
+            font-size: 1.5em;
+            letter-spacing: 3px; 
+            padding-top: 50px;
+        }
+    }
+    
+    #form {
+        width: 80%;
+    
+        input {
+            height: 25px; 
+            font-size: 1.25em;
+        }
+    
+        textarea {
+            height: 125px; 
+            font-size: 1.25em;
+        }
+    }
+}
+
+// Mobile Size
+@media only screen and (max-width: 575px) {
+    #mainSlide { background-position: center right; }
+    
+    .banner-text {
+        width: 100%;
+        position: relative;
+        top: 220px;
+        left: 0;
+        text-align: center;
+        
+        h2 { 
+            text-align: center;
+            font-size: 1.75em; 
+        }
+
+        .banner-bt {
+            width: 70%; 
+            height: 35px;
+            background-color:$main-color;
+            border-radius: 15px; 
+            color: $black;
+            font-size: 1em;
+            margin-top: 15px;
+            border: $hide;
+            font-family: 'DIN Alternate';
+        }
+    }
+
+    //Team page 
+    //Our mission
+    #mission {
+        height: 100%; 
+
+        .mission-h2 {
+            text-align: center;
+            font-size: 1em;
+            padding: 30px 0;
+        }
+
+        video { 
+            display: block;
+            width: 100%; 
+            margin: 0 auto;
+            height: auto;
+        }
+    }
+
+    //team info
+    #team-info {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        div { 
+            width: 100%;
+            height: 300px; 
+            overflow: hidden;
+            background-position-x: 0;
+        }
+    }
+
+    // Work examples
+    #exWork {
+        width: 100%;
+        background-color: $bg-color;
+    
+        h2 {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center; 
+            font-size: 1em; 
+            line-height: 1.25em;
+            padding-top: 50px; 
+        }
+    
+        .cont {
+            width:100%;
+            padding: 0 0 50px;
+            display:flex; 
+            flex-direction: row; 
+            flex-wrap: wrap;
+    
+            img {
+                width: 80%;
+                margin: 50px auto 0;
+                filter: drop-shadow(0 5px 5px black);
+            }
+        }
+    }
+
+    #contact-form {
+
+        h2 {
+            font-size: 1em; 
+            padding-top: 50px;
+        }
+    }
+    
+    #form {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    
+        input {
+            height: 15px; 
+            font-size: 0.75em;
+            margin-top: 15px;
+            border: solid $main-color 1px;
+            padding: 2px;
+        }
+    
+        textarea {
+            height: 75px; 
+            font-size: 0.75em;
+            margin-top: 15px;
+            border: solid $main-color 1px;
+            padding: 2px;
+        }
+
+        .submit-btn {
+            width: 90px;
+            height: 25px;
+            font-size: 0.75em;
+            margin-top: 15px;
+        }
+    }
+}
+
