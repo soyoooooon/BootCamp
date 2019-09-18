@@ -56,9 +56,6 @@ main {
     top: 300px;
     left: 70px;
     z-index: 2;
-    // height: 40vh;
-    // padding-top: 30vh;
-    // padding-left: 10vw;
     
     h2 {
         text-align: left; 
@@ -87,10 +84,27 @@ main {
 #team {
     width: 100%;
     height: 100vh;
-    background-image: url(../images/banner_team.png);
+    background-image: url(../images/team.jpg);
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
+    position: relative;
+
+    h2 {
+        text-align: center;
+        width: 20%;
+        height: 50px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        background-color: #000;
+        color: #fff;
+        padding: 15px;
+        margin: 0 auto;
+        font-size: 3em;
+        mix-blend-mode: multiply;
+    }
 }
 
 //Our mission
@@ -138,10 +152,27 @@ main {
 #team-work {
     width: 100%;
     height: 100vh;
-    background-image: url(../images/banner_work.png);
+    background-image: url(../images/work.jpg);
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
+    position: relative;
+
+    h2 {
+        text-align: center;
+        width: 20%;
+        height: 50px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        background-color: #000;
+        color: #fff;
+        padding: 16px;
+        margin: 0 auto;
+        font-size: 3em;
+        mix-blend-mode: multiply;
+    }
 }
 
 #exWork {
@@ -159,17 +190,14 @@ main {
 
     .cont {
         width:100%;
-        padding-top: 20px;
-        padding-bottom: 50px;
+        padding: 0 0 50px;
         display:flex; 
-        flex-direction: row; 
-        flex-wrap: wrap;
+        flex-flow: row wrap;
+        justify-content: center;
 
         img {
-            width: 45vw;
-            margin-left: 2.5vw;
-            margin-right: 2.5vh;
-            margin-top: 5vh;
+            width: 40%;
+            margin: 50px 25px 0;
             filter: drop-shadow(0 5px 5px black);
         }
     }
@@ -178,10 +206,27 @@ main {
 #contact-img {
     width: 100%;
     height: 100vh;
-    background-image: url(../images/banner_contact.png);
+    background-image: url(../images/contact.jpg);
     background-position: center center;
     background-size: cover; 
     background-attachment: fixed;
+    position: relative;
+
+    h2 {
+        text-align: center;
+        width: 20%;
+        height: 50px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        background-color: #000;
+        color: #fff;
+        padding: 16px;
+        margin: 0 auto;
+        font-size: 3em;
+        mix-blend-mode: multiply;
+    }
 }
 
 #contact-form {
@@ -248,7 +293,13 @@ main {
         h2 { text-align: center; }
     }
 
-    //Team page 
+    //Team page
+    #team h2 { 
+        font-size: 2.85em;
+        width: 40%;
+        height: 50px;
+    }
+
     //Our mission
     #mission {
         height: 100%; 
@@ -282,6 +333,12 @@ main {
     }
 
     // Work examples
+    #team-work h2 { 
+        font-size: 2.85em;
+        width: 40%;
+        height: 50px;
+    }
+
     #exWork {
         width: 100%;
         background-color: $bg-color;
@@ -298,15 +355,21 @@ main {
             width:100%;
             padding: 0 0 50px;
             display:flex; 
-            flex-direction: row; 
-            flex-wrap: wrap;
+            flex-flow: row wrap;
+            justify-content: center;
     
             img {
-                width: 80%;
-                margin: 50px auto 0;
+                width: 40%;
+                margin: 50px 25px 0;
                 filter: drop-shadow(0 5px 5px black);
             }
         }
+    }
+
+    #contact-img h2 { 
+        font-size: 2.85em;
+        width: 40%;
+        height: 50px;
     }
 
     #contact-form {
@@ -365,6 +428,12 @@ main {
     }
 
     //Team page 
+    #team h2 { 
+        font-size: 2em;
+        width: 40%;
+        height: 35px;
+    }
+
     //Our mission
     #mission {
         height: 100%; 
@@ -400,17 +469,22 @@ main {
     }
 
     // Work examples
+    #team-work h2 { 
+        font-size: 2em;
+        width: 40%;
+        height: 35px;
+    }
+
     #exWork {
         width: 100%;
         background-color: $bg-color;
     
         h2 {
-            width: 80%;
-            margin: 0 auto;
             text-align: center; 
-            font-size: 1em; 
-            line-height: 1.25em;
+            font-size: 1.25em; 
+            // letter-spacing: 2px; 
             padding-top: 50px; 
+            color: $black;
         }
     
         .cont {
@@ -426,6 +500,13 @@ main {
                 filter: drop-shadow(0 5px 5px black);
             }
         }
+    }
+
+    // contact
+    #contact-img h2 { 
+        font-size: 2em;
+        width: 40%;
+        height: 35px;
     }
 
     #contact-form {
