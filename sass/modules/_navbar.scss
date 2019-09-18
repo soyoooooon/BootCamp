@@ -9,6 +9,10 @@ header {
     #logo {
         width: 40%;
         margin: auto;
+        transition: .3s;
+        &:hover {
+          cursor: pointer;transform: scale(1.03);;
+        }
 
         img { width: 40%; }
     }
@@ -23,15 +27,22 @@ header {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-    
-        li a{
+
+        li{
+          transition: .3s;
+          &:hover {
+            transform: scale(1.05);
+          }
+
+          a{
             color: #313839;
             font-size: 1.5em;
             text-decoration: none;
             padding-left:  60px;
             text-transform: uppercase;
             line-height: 10vh;
-            cursor: pointer; 
+            cursor: pointer;
+          }
         }
     }
 }

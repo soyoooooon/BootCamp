@@ -14,15 +14,15 @@
     <main>
         <h1 class="hidden">Float:left - Daffodil Sujin Jeffrey Soyoon</h1>
         <header>
-            <div id="logo"><img href="index.html" src="images/logo.svg" alt="logo"></div>
-        
+            <div id="logo"><a href="#mainSlide"><img href="index.html" src="images/logo.svg" alt="logo"></a></div>
+
             <nav id="mainNav">
                 <div class="hidden" id="burgerMenu"><i class="fas fa-bars"></i></div>
                 <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">TEAM</a></li>
-                    <li><a href="#">WORK</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a id="home-nav" href="#mainSlide">HOME</a></li>
+                    <li><a id="team-nav"href="#team">TEAM</a></li>
+                    <li><a id="work-nav"href="#team-work">WORK</a></li>
+                    <li><a id="contact-nav"href="#contact-img">CONTACT</a></li>
                 </ul>
             </nav>
         </header>
@@ -30,30 +30,28 @@
         <section id="mainSlide">
             <div class="banner-text">
                 <h2>When they go right,<br>you <span>float:left;</span></h2>
-                <button class="banner-bt">start something amazing</button>
+                <a href="#form"><button class="banner-bt">start something amazing</button></a>
             </div>
         </section>
         <!----------Slide Ends---------->
-        
+
         <section id="team"><h2>float:team</h2></section>
         <!----Our mission here------->
         <section id="mission">
             <h2 class="mission-h2">Four people on a mission.</h2>
-            <video src="includes/video.mov" type="video/mov"></video>
+            <video src="includes/video.mov" type="video/mov" controls></video>
         </section>
         <!-------team info---------->
         <section id="team-info">
-            <div id="Dil"></div> 
-            <div id="Yoon"></div> 
+            <div id="Dil"></div>
+            <div id="Yoon"></div>
             <div id="Sujin"></div>
             <div id="Jeff"></div>
         </section>
         <!---------team work---------->
-        <section id="team-work">
-            <h2>float:work</h2>
-        </section>
+        <section id="team-work"><h2>float:work</h2></section>
         <article id="exWork">
-            <h2>Every creation is a new adventure. Want long-lasting impression, cool interactions, and fancy functionality? We’ve got you covered. Float: clients only deserve the best.<br><br>“Your idea + float:left = amazaballs”</h2>
+            <h2>Every creation is a new adventure. Want long-lasting impression, cool interactions, and fancy functionality? We’ve got you covered. Float: clients only deserve the best.<br><br>“Your idea + float:left = amazing”</h2>
 
             <section class="cont">
                 <img src="images/thumbnail1.jpg">
@@ -76,7 +74,7 @@
                     <button class="submit-btn">SUBMIT</button>
                 </form>
             </div>
-            
+
         </section>
 
         <footer id="mainFooter">
@@ -88,7 +86,8 @@
             </ul>
             <p>2019 © Copyright float:left - All Rights Reserved</p>
         </footer>
-        
+
     </main>
+    <script src="js/main.js"></script>
 </body>
 </html>

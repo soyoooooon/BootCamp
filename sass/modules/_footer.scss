@@ -13,15 +13,19 @@
         li {
             margin: 0 10px;
             text-align: center;
+            transition: .3s;
+            &:hover{
+              transform: scale(1.04);
+            }
 
             i { color: #fcb724; font-size: 3em;}
         }
     }
 
-    p { 
+    p {
         width: 100%;
         text-align: center;
-        color:#fcb724; 
+        color:#fcb724;
         font-size: 0.85em;
         padding: 10px 0 30px;
     }
@@ -30,15 +34,15 @@
 // media query will take some time
 @media only screen and (min-width: 576px) and (max-width: 768px) {
     #mainFooter {
-    
-        ul { 
+
+        ul {
             padding: 20px 0 0;
-            
+
             li i { font-size: 2em;}
         }
-            
-        p { 
-            font-size: 0.65em; 
+
+        p {
+            font-size: 0.65em;
             padding: 10px 0 20px;
         }
     }
@@ -47,15 +51,15 @@
 // media query will take some time
 @media only screen and (max-width: 575px) {
     #mainFooter {
-    
-        ul { 
+
+        ul {
             padding: 15px 0 0;
-            
+
             li i { font-size: 1.75em;}
         }
-            
-        p { 
-            font-size: 0.5em; 
+
+        p {
+            font-size: 0.5em;
             padding: 10px 0 15px;
         }
     }
