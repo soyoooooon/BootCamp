@@ -9,8 +9,13 @@ header {
     #logo {
         width: 40%;
         margin: auto;
+        margin-left: 20px;
+        transition: .3s;
+        &:hover {
+          cursor: pointer;transform: scale(1.03);;
+        }
 
-        img { width: 40%; }
+        img { width: 40%; min-width: 160px;}
     }
 }
 
@@ -23,15 +28,23 @@ header {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-    
-        li a{
+
+        li{
+          transition: .3s;
+          &:hover {
+            transform: scale(1.05);
+          }
+
+          a{
             color: #313839;
             font-size: 1.5em;
             text-decoration: none;
             padding-left:  60px;
             text-transform: uppercase;
             line-height: 10vh;
-            cursor: pointer; 
+            cursor: pointer;
+            &.onPage {transition: .25s ease-in-out; color: #fcb724}
+          }
         }
     }
 }
@@ -40,5 +53,63 @@ header {
 @media only screen and (min-width: 576px) and (max-width: 768px) {
     #logo img {
         width: 60%;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+  #burger {display: none;}
+
+}
+
+//BURGER MENU//
+@media only screen and (max-width: 768px) {
+
+    #mobileNavFiller {display: none;
+      &.fill-it{
+        display: flex;
+        flex-direction: column;
+        margin-top: 60px;
+        height: 28px;
+      	width: 100%;
+      	background-color: rgba(255,255,255,.86);
+       	position: fixed;
+      }
+    }
+    #mainNav {display: none;
+      &.slideToggle {
+        display: flex;
+        flex-direction: column;
+        margin-top: 88px;
+      	width: 100%;
+      	background-color: rgba(255,255,255,.86);
+       	position: fixed;
+        ul {
+          display: flex;
+          flex-direction: column;
+         li a {
+          display: block;
+          padding: 15px 0;
+          text-align: center;
+        	font-weight: normal;
+        	text-decoration: none;
+          line-height: normal;
+          &.onPage{color: black;}
+          }
+        }
+      }
+    }
+
+    #burger{
+      background: url(../images/burger_menu.svg) center no-repeat;
+    	border: none;
+      width: 20%;
+      max-width: 90px;
+      margin-right: 10px;
+      transition: all .2s ease-in-out;
+      &.expanded {
+        -webkit-transform: rotateZ(90deg);
+        -ms-transform: rotateZ(90deg);
+        transform: rotateZ(90deg);
+      }
     }
 }
