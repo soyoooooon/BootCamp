@@ -1,0 +1,176 @@
+#exWork {
+    width: 100%;
+    background-color: $bg-color;
+    padding: 50px 0;
+
+    h2 {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.5em;
+        color: $black;
+    }
+
+    .cont {
+        width:100%;
+        padding: 0 0 50px;
+        display:flex;
+        flex-direction: row;
+        // justify-content: center;
+
+        .wrapper {
+         width: 45%;
+         cursor: pointer;
+         position: relative;
+         margin: 50px 15px 0;
+
+        .img-hover{
+            width: 100%;
+            height: 100%;
+            top: 0%;
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            z-index: 1;
+            opacity: 0;
+            transition: all 300ms ease-in-out;
+            -webkit-transition: all 300ms ease-in-out;
+            -moz-transition: all 300ms ease-in-out;
+            -o-transition: all 300ms ease-in-out;
+            -ms-transition: all 300ms ease-in-out; 
+        
+        h2{margin-top: 25%; color: white;}
+        h2,p{text-align: center; color: white;}
+        }//img-hover ends
+        
+
+
+
+        img { width: 100%;}
+        }//wrapper ends
+        .wrapper:hover .img-hover{opacity: 1;}
+        .wrapper:hover .img{opacity: 0.5;}
+
+        }//container ends
+}//the biggest section ends
+
+    @media only screen and (min-width: 576px) and (max-width: 768px) {
+
+        #exWork {
+            width: 100%;
+            background-color: $bg-color;
+            padding: 50px 0;
+        
+            h2 {
+                width: 80%;
+                margin: 0 auto;
+                text-align: center;
+                font-size: 1.5em;
+                color: $black;
+            }
+        
+            .cont {
+                width:100%;
+                padding: 0 0 50px;
+                display:flex;
+                flex-direction: row;
+                // justify-content: center;
+        
+                .wrapper {
+                 width: 45%;
+                 cursor: pointer;
+                 position: relative;
+                 margin: 50px 15px 0;
+        
+                .img-hover{
+                    width: 100%;
+                    height: 100%;
+                    top: 0%;
+                    background: rgba(0, 0, 0, 0.5);
+                    position: absolute;
+                    z-index: 1;
+                    opacity: 0;
+                    transition: all 300ms ease-in-out;
+                    -webkit-transition: all 300ms ease-in-out;
+                    -moz-transition: all 300ms ease-in-out;
+                    -o-transition: all 300ms ease-in-out;
+                    -ms-transition: all 300ms ease-in-out; 
+                    
+                    h2{margin-top: 25%; color: white;}
+                    h2,p{text-align: center; color: white;}
+                }//img-hover ends
+                
+        
+        
+        
+                img { width: 100%;}
+                }//wrapper ends
+                .wrapper:hover .img-hover{opacity: 1;}
+                .wrapper:hover .img{opacity: 0.5;}
+        
+                }//container ends
+            }//the biggest section ends
+        }//tablet size ends
+
+
+@media only screen and (max-width: 575px) {
+
+    #exWork {
+        width: 100%;
+        background-color: $bg-color;
+        padding: 50px 0;
+    
+        h2 {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.5em;
+            color: $black;
+        }
+    
+        .cont {
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto;
+            
+    
+            .wrapper {
+             width: 90%;
+             height: 100%;
+             cursor: pointer;
+             position: relative;
+            
+             
+    
+            .img-hover{
+                width: 100%;
+                top: 0%;
+                background: rgba(0, 0, 0, 0.5);
+                position: absolute;
+                z-index: 1;
+                opacity: 0;
+                transition: all 300ms ease-in-out;
+                -webkit-transition: all 300ms ease-in-out;
+                -moz-transition: all 300ms ease-in-out;
+                -o-transition: all 300ms ease-in-out;
+                -ms-transition: all 300ms ease-in-out; 
+                
+                h2{margin-top: 25%; color: white;}
+                h2,p{text-align: center; color: white;}
+            }//img-hover ends
+            
+    
+    
+    
+            img { width: 100%; }
+            }//wrapper ends
+            .wrapper:hover .img-hover{opacity: 1;}
+            .wrapper:hover .img{opacity: 0.5;}
+    
+            }//container ends
+        }//the biggest section ends
+    }//moblie size ends
+
+
+
+  

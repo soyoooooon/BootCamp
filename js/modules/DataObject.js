@@ -6,9 +6,9 @@ const Team = {
     },
 
     Yoon: {
-        name: "Yoon",
-        role: "Yoon role",
-        bio: "Yoon bio",
+        name: "Soyoon",
+        role: "Hide",
+        bio: "dunno who i am.",
     },
 
     Sujin: {
