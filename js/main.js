@@ -1,3 +1,5 @@
+import Team from "./modules/DataObject.js";
+
 (() => {
 	console.log('link successful');
 
@@ -9,18 +11,42 @@
 	teamButton = document.querySelector('#team-nav'),
 	workButton = document.querySelector('#work-nav'),
 	contactButton = document.querySelector('#contact-nav'),
-	dilCard = document.querySelector('#Dil'),
-	yoonCard = document.querySelector('#Yoon'),
-	sujinCard = document.querySelector('#Sujin'),
-	jeffCard = document.querySelector('#Jeff'),
+
 	flipCard = document.querySelectorAll('.card'),
+	bioInfo = document.querySelector('.bios').children,
+
+	teamTab = document.querySelector('#team'),
+	workTab = document.querySelector('#team-work'),
+	contactTab = document.querySelector('#contact-img'),
   scrollPosition = window.pageYOffset;
 
 
+
+flipCard.forEach(card =>{
+		card.onmouseover = function (){
+		let	profileCard = ("text/plain", this.id);
+			bioInfo = document.querySelector(`#bio${profileCard}`).children;
+			bioInfo[0].textContent = Team[profileCard].name;
+			bioInfo[1].textContent = Team[profileCard].role;
+			bioInfo[2].textContent = Team[profileCard].bio;
+
+			console.log(profileCard);
+//add class
+			document.querySelector(`#${profileCard}`).classList.add("flip");
+			document.querySelector(`#bio${profileCard}`).classList.remove("hidden");
+//remove class
+			 card.onmouseout = function (){
+				 document.querySelector(`#${profileCard}`).classList.remove("flip");
+				 document.querySelector(`#bio${profileCard}`).classList.add("hidden")
+			 };
+		};
+
+	});
+
 //my overcomplex way of toggling nav class//
-	window.onscroll = function (){
+window.onscroll = function (){
 		scrollPosition = window.scrollY;
-		console.log(scrollPosition);
+		// console.log(scrollPosition);
 
 		if (scrollPosition <= 899) {
 			homeButton.classList.add("onPage");
@@ -43,35 +69,7 @@
 			workButton.classList.remove("onPage");
 			contactButton.classList.add("onPage");
 		};
-	};
-
-//Card Flip//
-
-//get id on mouseover//
-	flipCard.forEach(card =>{
-      card.onmouseover = function (){
-				profileCard = ("text/plain", this.id);
-				console.log(profileCard);
-//add class
-				document.querySelector(`#${profileCard}`).classList.add("flip");
-				document.querySelector(`#bio${profileCard}`).classList.remove("hidden");
-//remove class
-				 card.onmouseout = function (){
-					 document.querySelector(`#${profileCard}`).classList.remove("flip");
-					 document.querySelector(`#bio${profileCard}`).classList.add("hidden")
-				 };
-			};
-//"TOUCH" EVENT FOR MOBILE
-			card.onmousedown = function (e){
-				e.preventDefault();
-				profileCard = ("text/plain", this.id);
-				console.log(profileCard);
-//toggle class
-				document.querySelector(`#${profileCard}`).classList.toggle("flip");
-				document.querySelector(`#bio${profileCard}`).classList.toggle("hidden");
-			};
-
-			});
+};
 
 
 //Burger Menu Function//

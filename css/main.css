@@ -92,6 +92,9 @@ header {
       -webkit-transform: rotateZ(90deg);
       -ms-transform: rotateZ(90deg);
       transform: rotateZ(90deg); } }
+@font-face {
+  font-family: "DIN Alternate";
+  src: url("../css/DIN Alternate Bold.woff"), url("../css/DIN Alternate Bold.woff2"); }
 main {
   width: 100%;
   overflow: hidden;
@@ -224,19 +227,19 @@ main {
         color: white;
         padding: 5px;
         margin: 0;
-        font-size: 3rem; }
+        font-size: 2.1rem; }
       #team-info .flip .bios h3 {
         text-align: left;
-        color: white;
+        color: #fcb724;
         padding: 5px;
         margin: 0;
-        font-size: 2rem; }
+        font-size: 1.5rem; }
       #team-info .flip .bios p {
         text-align: left;
         color: white;
         padding: 5px;
         margin: 0;
-        font-size: 1.1rem; }
+        font-size: 1.2rem; }
   #team-info div {
     width: 25%;
     background-size: cover;

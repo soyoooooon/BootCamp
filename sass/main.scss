@@ -1,6 +1,12 @@
 @import '_vars';
 @import 'modules/navbar';
 
+@font-face {
+    font-family: "DIN Alternate";
+    src: url("../css/DIN Alternate Bold.woff"),
+         url("../css/DIN Alternate Bold.woff2");
+}
+
 main {
     width: 100%;
     overflow: hidden;
@@ -158,21 +164,21 @@ main {
         color: white;
         padding: 5px;
         margin: 0;
-        font-size: 3rem;
+        font-size: 2.1rem;
       }
       h3{
         text-align: left;
-        color: white;
+        color: #fcb724;
         padding: 5px;
         margin: 0;
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
       p{
         text-align: left;
         color: white;
         padding: 5px;
         margin: 0;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
       }
     }
   }
