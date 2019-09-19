@@ -38,6 +38,7 @@ header {
         line-height: 10vh;
         cursor: pointer; }
         #mainNav ul li a.onPage {
+          transition: .25s ease-in-out;
           color: #fcb724; }
 
 @media only screen and (min-width: 576px) and (max-width: 768px) {
@@ -206,6 +207,36 @@ main {
   height: 100vh;
   display: flex;
   flex-direction: row; }
+  #team-info .flip {
+    animation: cardFlip .75s forwards; }
+    #team-info .flip .hidden {
+      display: none; }
+    #team-info .flip .bios {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.75);
+      transform: rotateY(180deg); }
+      #team-info .flip .bios h2 {
+        text-align: left;
+        color: white;
+        padding: 5px;
+        margin: 0;
+        font-size: 3rem; }
+      #team-info .flip .bios h3 {
+        text-align: left;
+        color: white;
+        padding: 5px;
+        margin: 0;
+        font-size: 2rem; }
+      #team-info .flip .bios p {
+        text-align: left;
+        color: white;
+        padding: 5px;
+        margin: 0;
+        font-size: 1.1rem; }
   #team-info div {
     width: 25%;
     background-size: cover;
@@ -221,6 +252,11 @@ main {
   #team-info #Jeff {
     background-image: url(../images/team_jeff.jpg); }
 
+@keyframes cardFlip {
+  from {
+    transform: rotateY(0deg); }
+  to {
+    transform: rotateY(180deg); } }
 #team-work {
   width: 100%;
   height: 100vh;

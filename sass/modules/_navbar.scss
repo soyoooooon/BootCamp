@@ -43,7 +43,7 @@ header {
             text-transform: uppercase;
             line-height: 10vh;
             cursor: pointer;
-            &.onPage {color: #fcb724}
+            &.onPage {transition: .25s ease-in-out; color: #fcb724}
           }
         }
     }
