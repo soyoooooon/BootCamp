@@ -86,6 +86,7 @@ main {
         transition: .3s;
         &:hover{
           cursor: pointer;
+          background-color: #f0ab18;
           transform: scale(1.05);}
     }
 }
@@ -231,38 +232,7 @@ main {
     }
 }
 
-#exWork {
-    width: 100%;
-    background-color: $bg-color;
-    padding: 50px 0;
-
-    h2 {
-        width: 80%;
-        margin: 0 auto;
-        text-align: center;
-        font-size: 1.5em;
-        color: $black;
-    }
-
-    .cont {
-        width:100%;
-        padding: 0 0 50px;
-        display:flex;
-        flex-flow: row wrap;
-        justify-content: center;
-
-        img {
-            width: 40%;
-            margin: 50px 25px 0;
-            filter: drop-shadow(0 5px 5px black);
-            transition: .3s;
-            &:hover{
-              transform: scale(1.04);
-              filter: drop-shadow(0 10px 10px black);
-            }
-        }
-    }
-}
+@import 'modules/_exwork';
 
 #contact-img {
     width: 100%;
@@ -341,6 +311,7 @@ main {
         transition: .3s;
         &:hover{
           transform: scale(1.01);
+          background-color: #f0ab18;
           box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
     }
 }
@@ -409,32 +380,7 @@ main {
         height: 50px;
     }
 
-    #exWork {
-        width: 100%;
-        background-color: $bg-color;
-
-        h2 {
-            text-align: center;
-            font-size: 1.25em;
-            // letter-spacing: 2px;
-            padding-top: 50px;
-            color: $black;
-        }
-
-        .cont {
-            width:100%;
-            padding: 0 0 50px;
-            display:flex;
-            flex-flow: row wrap;
-            justify-content: center;
-
-            img {
-                width: 40%;
-                margin: 50px 25px 0;
-                filter: drop-shadow(0 5px 5px black);
-            }
-        }
-    }
+    //modules examele works here
 
     #contact-img h2 {
         font-size: 2.85em;
@@ -540,40 +486,7 @@ main {
         }
     }
 
-    // Work examples
-    #team-work h2 {
-        font-size: 2em;
-        width: 40%;
-        min-width: none;
-        height: 35px;
-    }
 
-    #exWork {
-        width: 100%;
-        background-color: $bg-color;
-
-        h2 {
-            text-align: center;
-            font-size: 1.25em;
-            // letter-spacing: 2px;
-            padding-top: 50px;
-            color: $black;
-        }
-
-        .cont {
-            width:100%;
-            padding: 0 0 50px;
-            display:flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-
-            img {
-                width: 80%;
-                margin: 50px auto 0;
-                filter: drop-shadow(0 5px 5px black);
-            }
-        }
-    }
 
     // contact
     #contact-img h2 {
