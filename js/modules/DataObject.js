@@ -12,9 +12,9 @@ const Team = {
     },
 
     Sujin: {
-        name: "Sujin",
-        role: "Sujin role",
-        bio: "Sujin bio",
+        name: "Sujin Lee",
+        role: "Designer/Creator",
+        bio: "When it comes to design that is my part! Let's get inspired :)",
     },
 
     Jeff: {
