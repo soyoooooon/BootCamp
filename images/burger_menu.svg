@@ -4,11 +4,8 @@
 	 viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:none;stroke:#231F20;stroke-width:26;stroke-linecap:round;stroke-miterlimit:10;}
-	.st1{fill:none;stroke:#231F20;stroke-width:23;stroke-linecap:round;stroke-miterlimit:10;}
 </style>
-<line class="st0" x1="139" y1="184" x2="360" y2="184"/>
-<line class="st0" x1="139" y1="250" x2="360" y2="250"/>
-<line class="st0" x1="139" y1="316" x2="360" y2="316"/>
-<path class="st1" d="M341.8,451H158.2C97.9,451,49,402.1,49,341.8V158.2C49,97.9,97.9,49,158.2,49h183.6
-	C402.1,49,451,97.9,451,158.2v183.6C451,402.1,402.1,451,341.8,451z"/>
+<line class="st0" x1="104" y1="143.1" x2="395" y2="143.1"/>
+<line class="st0" x1="104" y1="240" x2="395" y2="240"/>
+<line class="st0" x1="104" y1="336.9" x2="395" y2="336.9"/>
 </svg>
