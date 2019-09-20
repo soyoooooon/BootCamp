@@ -49,7 +49,7 @@ header {
     }
 }
 
-// media query will take some time
+// Tablet Size
 @media only screen and (min-width: 576px) and (max-width: 768px) {
     #logo img {
         width: 60%;
@@ -105,6 +105,7 @@ header {
       width: 20%;
       max-width: 90px;
       margin-right: 10px;
+      outline: none;
       transition: all .2s ease-in-out;
       &.expanded {
         -webkit-transform: rotateZ(90deg);
