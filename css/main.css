@@ -385,6 +385,13 @@ main {
   text-align: center;
   font-size: 1.5em;
   color: #313839; }
+#exWork p {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1em;
+  color: #313839;
+  line-height: 1.2em; }
 #exWork .cont {
   width: 100%;
   padding: 0 0 50px;
@@ -413,8 +420,7 @@ main {
   color: white; }
 #exWork .cont .wrapper .img-hover h2, #exWork .cont .wrapper .img-hover p {
   text-align: center;
-  color: white;
-  line-height: 1.5em; }
+  color: white; }
 #exWork .cont .wrapper img {
   width: 100%; }
 #exWork .cont .wrapper:hover .img-hover {
@@ -433,6 +439,13 @@ main {
     text-align: center;
     font-size: 1.5em;
     color: #313839; }
+  #exWork p {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0.8em;
+    color: #313839;
+    line-height: 1em; }
   #exWork .cont {
     width: 100%;
     padding: 0 0 50px;
@@ -461,8 +474,7 @@ main {
     color: white; }
   #exWork .cont .wrapper .img-hover h2, #exWork .cont .wrapper .img-hover p {
     text-align: center;
-    color: white;
-    line-height: 1.5em; }
+    color: white; }
   #exWork .cont .wrapper img {
     width: 100%; }
   #exWork .cont .wrapper:hover .img-hover {
@@ -478,8 +490,15 @@ main {
     width: 80%;
     margin: 0 auto;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: #313839; }
+  #exWork p {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0.8em;
+    color: #313839;
+    line-height: 1em; }
   #exWork .cont {
     display: flex;
     flex-direction: column;
@@ -507,8 +526,7 @@ main {
     color: white; }
   #exWork .cont .wrapper .img-hover h2, #exWork .cont .wrapper .img-hover p {
     text-align: center;
-    color: white;
-    line-height: 1.5em; }
+    color: white; }
   #exWork .cont .wrapper img {
     width: 100%; }
   #exWork .cont .wrapper:hover .img-hover {
