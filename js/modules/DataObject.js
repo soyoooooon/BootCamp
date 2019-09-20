@@ -1,8 +1,8 @@
 const Team = {
     Dil : {
-        name: "Dil",
-        role: "Dil role",
-        bio: "Dil bio",
+        name: "Daffodil Ho",
+        role: "Perhaps A Designer",
+        bio: "When nothing goes right, go left.",
     },
 
     Yoon: {
