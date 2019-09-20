@@ -132,13 +132,107 @@ main {
         padding-bottom: 50px;
     }
 
-    video {
+    #videoContainer {
         display: block;
+        position: relative;
         width: 70%;
         margin: 0 auto;
         height: auto;
+        &:hover .video-controls{opacity: .6;}
+
+        video {
+          display: block;
+          width: 100%;
+          margin: 0 auto;
+          height: auto;
+        }
+
+        .video-controls {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          position: relative;
+          width: 100%;
+          height: 40px;
+          margin: 0 auto;
+          margin-top: -40px;
+          color: white;
+          background: linear-gradient(rgba(75,75,75,.05), rgba(75,75,75,1)90%);
+          opacity: 0;
+          transition: .5s;
+
+          button {
+            display: flex;
+            align-items: center;
+            margin: auto 0;
+            height: 30px;
+            width: 30px;
+            background-color: inherit;
+            border: none;
+            outline: none;
+            cursor: pointer;
+
+            img {
+              width: inherit;
+              height: inherit;
+              &:hover { background: rgba(252, 183, 36, 1); border-radius: 20px;}
+            }
+          }
+
+          .play-pause{justify-content: flex-start;}
+
+          .full {justify-content: flex-end;}
+
+          #vol {width: 18%; justify-content: flex-start;}
+
+          #progress-bar {width: 55%; justify-content: flex-start;}
+
+          input {margin:0; height: 40px; padding: 0; border: none;}
+
+          input[type=range] {-webkit-appearance: none; background: transparent;}
+          input[type=range]:focus {outline: none;}
+
+          input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance:none;
+            border:none;
+            height: 12px;
+            width: 12px;
+            border-radius: 100%;
+            background-color:  rgba(252, 183, 36, 1);
+            border: 2px solid rgba(0,0,0,1);
+            cursor: pointer;
+          }
+
+          input[type=range]::-moz-range-thumb {
+            border:none;
+            height: 12px;
+            width: 12px;
+            border-radius: 100%;
+            background-color:  rgba(252, 183, 36, 1);
+            border: 2px solid rgba(0,0,0,1);
+            cursor: pointer;
+          }
+
+          input[type=range]::-webkit-slider-thumb:hover {background:rgba(0,0,0,.4)}
+          input[type=range]::-moz-range-thumb:hover {background:rgba(0,0,0,.4)}
+
+          input[type=range]::-webkit-slider-runnable-track {
+            height: 10px;
+            background-color: darkgrey;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+
+          input[type=range]::-moz-range-track{
+            height: 10px;
+            background-color: darkgrey;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+
+        }
     }
-}
+  }
 
 //team info
 #team-info {
@@ -351,12 +445,9 @@ main {
             padding: 0 0 50px;
         }
 
-        video {
-            display: block;
-            width: 80%;
-            margin: 0 auto;
-            height: auto;
-        }
+        #videoContainer {
+          width: 80%;
+          .video-controls{button{height: 25px; width: 25px;}}}
     }
 
     //team info
@@ -462,12 +553,12 @@ main {
             padding: 30px 0;
         }
 
-        video {
-            display: block;
-            width: 100%;
-            margin: 0 auto;
-            height: auto;
-        }
+        #videoContainer {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+        .video-controls{button{height: 20px; width: 20px;}}}
     }
 
     //team info

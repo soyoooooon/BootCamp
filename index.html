@@ -42,7 +42,18 @@
         <!----Our mission here------->
         <section id="mission">
             <h2 class="mission-h2">Four people on a mission.</h2>
-            <video src="includes/video.mov" type="video/mov" controls></video>
+
+            <div id="videoContainer">
+              <video src="includes/video.mov" type="video/mov" id="video"></video>
+              <div class="video-controls">
+                <button class="play-pause"><img src="images/play.png" alt="play/pause icon" id="plause"></button>
+                <input type="range" id="progress-bar" value="0">
+                <button class="mute"><img src="images/volume.png" alt="volume icon" id="volume"></button>
+                <input type="range" id="vol" min="0" max="10" step="1" value="10">
+                <button class="full"><img src="images/fullscreen.png" alt="fullscreen icon" id="fullscreen"></button>
+              </div>
+            </div>
+
         </section>
         <!-------team info---------->
         <section id="team-info">
@@ -88,7 +99,7 @@
             <section class="cont">
                 <div class="wrapper">
                 <img src="images/thumbnail1.jpg" alt="example1">
-                 <div class="img-hover"><h2>website link:</h2><p>put some text here</p></div></div> 
+                 <div class="img-hover"><h2>website link:</h2><p>put some text here</p></div></div>
                  <!------the first wrapper ends------->
                 <div class="wrapper">
                 <img src="images/thumbnail2.jpg" alt="example2">
@@ -98,11 +109,11 @@
                 <section class="cont">
                 <div class="wrapper">
                 <img src="images/thumbnail3.jpg" alt="example3">
-                <div class="img-hover"><h2>website link:</h2><p>put some text here</p></div></div> 
+                <div class="img-hover"><h2>website link:</h2><p>put some text here</p></div></div>
                  <!-----the third wrapper ends--------->
                 <div class="wrapper">
                 <img src="images/thumbnail4.jpg" alt="example4">
-                <div class="img-hover"><h2>website link:</h2><p>put some text here</p></div></div> 
+                <div class="img-hover"><h2>website link:</h2><p>put some text here</p></div></div>
             </section>
         </article>
         <!-------------Contact Starts------------->
