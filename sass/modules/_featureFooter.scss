@@ -1,0 +1,28 @@
+#mainFooter {
+    width: 100%;
+    height: 8vh;
+    background-color: #313839;
+
+    p {
+        width: 100%;
+        text-align: center;
+        color:#fcb724;
+        font-size: 0.85em;
+        line-height: 8vh;
+    }
+}
+
+// Tablet
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    #mainFooter {
+
+        p {font-size: 0.65em;}
+    }
+}
+
+// Mobile
+@media only screen and (max-width: 575px) {
+    #mainFooter {
+        p {font-size: 0.5em;}
+    }
+}
