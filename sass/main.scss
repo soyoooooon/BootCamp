@@ -77,17 +77,20 @@ main {
         width: 385px;
         height: 50px;
         background-color:$main-color;
+        text-align: center;
+        line-height: 50px;
         border-radius: 15px;
         color: $black;
         font-size: 1.5em;
         margin-top: 30px;
         border: $hide;
-        font-family: 'DIN Alternate';
         transition: .3s;
         &:hover{
           cursor: pointer;
           background-color: #f0ab18;
           transform: scale(1.05);}
+
+        a { text-decoration: none; color: $black;}
     }
 }
 
@@ -425,6 +428,10 @@ main {
         text-align: center;
 
         h2 { text-align: center; }
+
+        .banner-bt {
+            margin: 20px auto;
+        }
     }
 
     //Team page
@@ -524,13 +531,14 @@ main {
         }
 
         .banner-bt {
-            width: 70%;
+            width: 50%;
             height: 35px;
             background-color:$main-color;
             border-radius: 15px;
             color: $black;
             font-size: 1em;
-            margin-top: 15px;
+            line-height: 35px;
+            margin: 15px auto 0;
             border: $hide;
             font-family: 'DIN Alternate';
         }
