@@ -1,8 +1,6 @@
 # Boot Camp
 
-### Designing, coding and semantically tagging a static HTML5 and CSS3 website for our start up team pages For the purposes of the Boot Camp  project. 
-
- 
+### Designing and developing a responsive HTML5 and CSS3 website for our start up agency.
 
 ## Authors 
 
@@ -13,7 +11,7 @@
 
  
 
-## Webstie Design 
+## Website Design 
 
 * Design the all the wireframes for the desktop, tablet and the moblie size 
 * Considering UI/UX designs 
